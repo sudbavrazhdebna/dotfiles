@@ -1,0 +1,43 @@
+{
+ "theme": "One Dark Pro",
+ "cli_default_open_behavior": "existing_window",
+	"outline_panel": {
+		"dock": "left",
+	},
+	"collaboration_panel": {
+		"dock": "left",
+	},
+	"agent": {
+		"dock":             "right",
+		"favorite_models":  [],
+		"model_parameters": [],
+	},
+	"git_panel": {
+		"dock": "left",
+	},
+	"window_decorations": "server",
+	"icon_theme":         "Colored Zed Icons Theme Dark",
+	"tabs": {
+		"git_status": true,
+	},
+	"project_panel": {
+		"dock":   "left",
+		"button": true,
+	},
+	"title_bar": {
+		"show_branch_status_icon": true,
+		"show_branch_name":        true,
+		"show_menus":              false,
+		"show_user_menu":          true,
+		"show_user_picture":       false,
+	},
+	"ui_font_size":     18.0,
+	"buffer_font_size": 15,
+	"theme_overrides": {
+  "One Dark Pro": {
+    "title_bar.background": "#21252b",
+    "title_bar.inactive_background": "#1e2127",
+    "border": "#404042",
+    }
+	},
+}

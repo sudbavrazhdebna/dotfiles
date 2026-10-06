@@ -1,0 +1,31 @@
+#dashtodockContainer #dash .dash-background {
+  background-color: rgba(56, 56, 61, 0.98) !important;
+  border: 1px solid rgba(68, 68, 70, 1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+#dashtodockContainer.extended #dash .dash-background,
+#dashtodockContainer.straight-corner #dash .dash-background {
+  border-radius: 0 !important;
+}
+
+#dashtodockContainer.bottom #dash {
+  padding-top: 10px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-bottom: 4px !important;
+}
+
+#dashtodockContainer.bottom #dash .dash-item-container {
+  margin: 1px 1px !important;
+}
+
+#dashtodockContainer #dash .overview-icon {
+  border-radius: 12px !important;
+}
+
+#dashtodockContainer.bottom #dash .dash-separator {
+  margin: 0 12px !important;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+}

@@ -1,0 +1,16 @@
+#!/bin/sh
+BAR=dock
+DELAY=3
+PIDFILE="${XDG_RUNTIME_DIR:-/tmp}/dock-peek.pid"
+
+[ -f "$PIDFILE" ] && kill "$(cat "$PIDFILE")" 2>/dev/null
+
+ironbar bar "$BAR" set-visible true
+
+{
+    sleep "$DELAY"
+    ironbar bar "$BAR" set-visible false
+    rm -f "$PIDFILE"
+} &
+
+echo $! > "$PIDFILE"

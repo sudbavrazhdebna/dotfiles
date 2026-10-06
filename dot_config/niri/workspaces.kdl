@@ -1,0 +1,46 @@
+workspace "main" {
+    open-on-output "HDMI-A-1"
+}
+workspace "browser" {
+    open-on-output "HDMI-A-1"
+}
+workspace "chat"{
+    open-on-output "HDMI-A-1"
+}
+workspace "utils"{
+    open-on-output "HDMI-A-1"
+}
+
+window-rule {
+    match app-id=r#"^org\.mozilla\.firefox$"#
+    match title="Chromium"
+    open-on-workspace "browser"
+}
+
+window-rule {
+    match app-id="dev.zed.Zed"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="sublime_text"
+    match app-id="codium"
+    match app-id="jetbrains-pycharm-ce"
+    match app-id="Alacritty"
+
+    open-on-workspace "main"
+}
+
+window-rule {
+    match app-id="org.telegram.desktop"
+    match title="Discord"
+    open-on-workspace "chat"
+}
+
+window-rule {
+    match title="v2rayN"
+    open-on-workspace "utils"
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    open-on-workspace "main"
+}

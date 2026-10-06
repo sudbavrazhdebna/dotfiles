@@ -1,0 +1,95 @@
+.tabbrowser-arrowscrollbox {
+  overflow: hidden !important;
+}
+
+.tabbrowser-arrowscrollbox > scrollbox,
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-start-indicator,
+.tabbrowser-arrowscrollbox > .arrowscrollbox-overflow-end-indicator {
+  transform: none !important;
+}
+
+.tabbrowser-tab {
+  min-width: 0 !important;
+  position: relative !important;
+}
+
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down,
+.tabbrowser-scrollbox-overflow-indicator {
+  display: none !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+  min-width: 1px !important;
+  container-type: inline-size;
+  container-name: tab-container;
+}
+
+@container tab-container (max-width: 50px) {
+  .tab-content {
+    padding-inline: 0px !important;
+    justify-content: center !important;
+  }
+  .tab-label-container {
+    display: none !important;
+  }
+  .tab-icon-image,
+  .tab-icon-stack {
+    margin-inline: 0px !important;
+  }
+  .tabbrowser-tab:not([selected]) .tab-close-button {
+    display: none !important;
+  }
+}
+
+@container tab-container (max-width: 40px) {
+  .tab-close-button {
+    display: none !important;
+  }
+}
+
+.tabbrowser-tab[closing] {
+  min-width: 0px !important;
+  max-width: 0px !important;
+  padding-inline: 0px !important;
+  margin-inline: 0px !important;
+  opacity: 0 !important;
+  transition: all 150ms ease !important;
+}
+
+.tabbrowser-tab:not([pinned])::after {
+  content: "" !important;
+  position: absolute !important;
+  inset-inline-end: 0 !important;
+  top: 25% !important;
+  height: 50% !important;
+  width: 1px !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  pointer-events: none !important;
+}
+
+.tabbrowser-tab[selected]::after,
+.tabbrowser-tab:has(+ .tabbrowser-tab[selected])::after,
+.tabbrowser-tab:nth-last-child(1 of .tabbrowser-tab:not([hidden], [closing]))::after {
+  opacity: 0 !important;
+}
+
+.titlebar-buttonbox-container .titlebar-button > .toolbarbutton-icon {
+  width: 22px !important;
+  height: 22px !important;
+}
+
+#PersonalToolbar toolbarbutton:hover {
+  background: rgba(245, 245, 247, 0.08) !important;
+  border-radius: 6px !important;
+}
+
+#TabsToolbar {
+  overflow: hidden !important;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.6) !important;
+}
+
+#nav-bar {
+  padding-block: 5px !important; 
+}
+

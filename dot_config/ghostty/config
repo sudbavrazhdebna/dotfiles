@@ -1,0 +1,36 @@
+font-family = Iosevka
+window-padding-x = 5
+window-padding-y = 5
+background = #16161C
+resize-overlay-duration = 1s 200ms
+window-subtitle = working-directory
+
+gtk-custom-css = ./style.css
+
+shell-integration = detect
+shell-integration-features = title, cursor, sudo, ssh-env, ssh-terminfo
+window-inherit-working-directory = false
+tab-inherit-working-directory = false
+split-inherit-working-directory = false
+window-decoration = server
+cursor-style-blink = false
+gtk-titlebar = false
+#gtk-titlebar-style = tabs 
+gtk-wide-tabs = true
+gtk-toolbar-style = raised
+
+gtk-single-instance=true
+# tab location (top, bottom, hidden)
+gtk-tabs-location = top
+
+background-opacity = 1
+
+copy-on-select = clipboard
+#clipboard-trim-trailing-spaces = true
+
+
+#keybinds
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+e=new_split:down
+keybind = ctrl+shift+x=close_surface
+keybind = ctrl+tab=goto_split:next

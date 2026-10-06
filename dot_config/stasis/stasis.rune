@@ -1,0 +1,69 @@
+default:
+  enable_loginctl_integration true
+  enable_dbus_inhibit true
+
+  pre_suspend_command None
+  prepare_sleep_command "veila lock"
+
+  lid_close_action "systemctl suspend"
+  lid_open_action ""
+
+  monitor_media true
+  ignore_remote_media true
+  debounce_seconds 4
+
+  inhibit_apps [
+    "vlc"
+    "mpv"
+    r"steam_app_.*"
+  ]
+
+  ac:
+    brightness:
+      timeout 120
+      command "brightnessctl get > /tmp/brightness_saved && brightnessctl --device='platform::kbd_backlight' get > /tmp/kbd_brightness_saved && brightnessctl set 5% && brightnessctl --device='platform::kbd_backlight' set 0%"
+      resume_command "brightnessctl set $(cat /tmp/brightness_saved) && brightnessctl --device='platform::kbd_backlight' set $(cat /tmp/kbd_brightness_saved)"
+    end
+
+    lock_screen:
+      timeout 180
+      command "veila lock"
+    end
+
+    dpms:
+      timeout 600
+      command "niri msg action power-off-monitors"
+      resume_command "niri msg action power-on-monitors"
+    end
+
+    suspend:
+      timeout 900
+      command "systemctl suspend"
+    end
+  end
+
+  battery:
+    brightness:
+      timeout 60
+      command "brightnessctl get > /tmp/brightness_saved && brightnessctl --device='platform::kbd_backlight' get > /tmp/kbd_brightness_saved && brightnessctl set 5% && brightnessctl --device='platform::kbd_backlight' set 0%"
+
+      resume_command "brightnessctl set $(cat /tmp/brightness_saved) && brightnessctl --device='platform::kbd_backlight' set $(cat /tmp/kbd_brightness_saved)"
+    end
+
+    dpms:
+      timeout 120
+      command "niri msg action power-off-monitors"
+      resume_command "niri msg action power-on-monitors"
+    end
+
+    lock_screen:
+      timeout 180
+      command "veila lock"
+    end
+
+    suspend:
+      timeout 200
+      command "systemctl suspend"
+    end
+  end
+end

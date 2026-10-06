@@ -1,0 +1,162 @@
+/*
+@define-color headerbar_bg_color rgba(42, 43, 46, 1);
+@define-color window_bg_color rgba(36, 37, 40, 1);
+@define-color sidebar_bg_color rgba(41, 42, 45, 1);
+@define-color view_bg_color rgba(33, 34, 37, 1);
+
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color card_bg_color rgba(245, 245, 245, 0.08);
+@define-color sidebar_backdrop_color @sidebar_bg_color;
+@define-color secondary_sidebar_backdrop_color @sidebar_bg_color;
+@define-color shade_color rgba(0, 0, 0, 0.2);
+@define-color accent_bg_color rgb(10, 132, 200);
+@define-color accent_color @accent_bg_color;
+
+@define-color window_fg_color #ffffff;
+@define-color view_fg_color #ffffff;
+@define-color headerbar_fg_color #ffffff;
+@define-color popover_fg_color #ffffff;
+@define-color card_fg_color #ffffff;
+@define-color dialog_fg_color #ffffff;
+@define-color sidebar_fg_color #ffffff;
+@define-color accent_fg_color #ffffff;
+
+dialog.alert .message-area,
+dialog.alert .response-area {
+    background-color: @window_bg_color;
+}
+*/
+
+@define-color accent_bg_color rgb(10, 132, 200);
+@define-color accent_color @accent_bg_color;
+
+
+/* GTK-4 window*/
+window.csd:not(.ssd-frame):not(.maximized):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-right):not(.tiled-bottom):not(.tiled-left) {
+  outline: 1px solid rgba(255, 255, 255, 0.12);
+  outline-offset: -1px;
+  box-shadow:
+    0 3px 3px 0 rgba(0, 0, 0, 0.3),
+    0 8px 8px 0 rgba(0, 0, 0, 0.25),
+    0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+window.csd:not(.ssd-frame):not(.maximized):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-right):not(.tiled-bottom):not(.tiled-left):backdrop {
+  outline: 1px solid rgba(255, 255, 255, 0.09);
+  outline-offset: -1px;
+  box-shadow:
+    0 4px 4px 0 rgba(0, 0, 0, 0.2),
+    0 8px 8px 0 rgba(0, 0, 0, 0.15),
+    0 10px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* GTK-4 titlebar for xwayland windows */
+window.csd.ssd-frame:not(.maximized):not(.fullscreen):not(.tiled):not(.tiled-top):not(.tiled-right):not(.tiled-bottom):not(.tiled-left) headerbar.titlebar.default-decoration {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-top: none;
+  border-bottom: none;
+}
+
+window.csd.ssd-frame {
+  border-radius: 12px 12px 0 0;
+  outline: none;
+  box-shadow:
+    0 3px 3px 0 rgba(0, 0, 0, 0.3),
+    0 8px 8px 0 rgba(0, 0, 0, 0.25),
+    0 10px 20px 0 rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(64, 64, 66, 1);
+}
+
+window.csd.ssd-frame:backdrop {
+  outline: none;
+  box-shadow:
+    0 3px 3px 0 rgba(0, 0, 0, 0.2),
+    0 8px 8px 0 rgba(0, 0, 0, 0.15),
+    0 10px 20px 0 rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(52, 52, 54, 1);
+}
+
+window.csd.ssd-frame.tiled,
+window.csd.ssd-frame.tiled-top,
+window.csd.ssd-frame.tiled-right,
+window.csd.ssd-frame.tiled-bottom,
+window.csd.ssd-frame.tiled-left,
+window.csd.ssd-frame.tiled:backdrop,
+window.csd.ssd-frame.tiled-top:backdrop,
+window.csd.ssd-frame.tiled-right:backdrop,
+window.csd.ssd-frame.tiled-bottom:backdrop,
+window.csd.ssd-frame.tiled-left:backdrop,
+window.csd.ssd-frame.tiled headerbar.titlebar.default-decoration,
+window.csd.ssd-frame.tiled-top headerbar.titlebar.default-decoration,
+window.csd.ssd-frame.tiled-right headerbar.titlebar.default-decoration,
+window.csd.ssd-frame.tiled-bottom headerbar.titlebar.default-decoration,
+window.csd.ssd-frame.tiled-left headerbar.titlebar.default-decoration,
+window.tiled-right,
+window.tiled-left,
+window.tiled-top,
+window.tiled-bottom  {
+  border-radius: 0;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+
+/*
+windowcontrols button image,
+windowcontrols > button:backdrop > image {
+  background-color: rgba(200, 200, 200, 0.16);
+}
+windowcontrols > button:hover > image,
+windowcontrols > button:backdrop:hover > image {
+  background-color: rgba(200, 200, 200, 0.24);
+}
+*/
+
+windowcontrols > button > image {
+  padding: 3px;
+}
+windowcontrols button {
+  margin: 0 -1px; 
+}
+
+popover > contents,
+popover > arrow {
+  border: 1px solid rgb(65, 65, 65);
+  background: rgba(62, 62, 65, 1);
+}
+
+popover > contents,
+toast {
+  box-shadow:
+    0 2px 2px rgba(0, 0, 0, 0.3),
+    0 4px 4px rgba(0, 0, 0, 0.2),
+    0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+toast {
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -1px;
+  background-color: rgba(66, 66, 71, 0.99);
+  border-radius: 16px;
+}
+
+tooltip {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+tooltip label {
+  background-color: rgba(20, 21, 24, 0.99);
+  border-radius: 14px;
+  outline: 1px solid rgba(255, 255, 255, 0.14);
+  outline-offset: -1px;
+  padding: 10px 16px;
+  font-size: 16px;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 3px 6px rgba(0, 0, 0, 0.2);
+}
+

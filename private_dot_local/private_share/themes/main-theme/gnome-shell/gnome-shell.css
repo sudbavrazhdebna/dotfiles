@@ -1,0 +1,87 @@
+.osd-window,
+.notification-banner,
+.switcher-list,
+.popup-menu-content {
+  border-radius: 18px;
+  background-color: rgba(56, 56, 61, 0.99);
+  border: 1px solid rgba(72, 72, 74, 1);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.osd-window {
+  padding: 12px;
+}
+.switcher-list {
+  padding: 5px;
+}
+
+.quick-settings,
+.quick-toggle-menu {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.panel-button {
+  -natural-hpadding: 10px;
+  -minimum-hpadding: 2px;
+}
+.panel-button .system-status-icon {
+  padding: 0;
+}
+#panel {
+  background-color: transparent;
+}
+#panel .panel-status-indicators-box,
+#panel .panel-status-menu-box {
+  spacing: 12px;
+}
+#panel .panel-button .system-status-icon StLabel {
+  min-width: 22px;
+  text-align: center;
+}
+#panel .panel-button StIcon,
+#panel .panel-button .system-status-icon {
+  icon-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#panel .panel-button,
+#panel .panel-button StLabel {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.search-entry {
+  border-radius: 14px;
+  background-color: rgba(72, 72, 72, 0.5);
+  border: 1px solid rgba(74, 74, 76, 0.8);
+}
+.search-section-content,
+.icon-grid .app-folder {
+  background-color: rgba(72, 72, 72, 0.5);
+  border: 1px solid rgba(74, 74, 76, 0.5);
+}
+.search-section-content .list-search-result:selected,
+.search-section-content .list-search-result:focus {
+  background-color: transparent;
+}
+.search-section-content .list-search-result:hover {
+  background-color: rgba(90, 90, 90, 0.6);
+}
+.search-section-content .list-search-result:active {
+  background-color: rgba(110, 110, 110, 0.7);
+}
+
+.grid-search-results .overview-tile:selected,
+.grid-search-results .overview-tile:focus,
+.grid-search-results .overview-tile:hover,
+.icon-grid .overview-tile:focus,
+.icon-grid .overview-tile:hover {
+  background-color: rgba(90, 90, 90, 0.5);
+}
+
+.grid-search-results .overview-tile:selected:hover,
+.grid-search-results .overview-tile:focus:hover,
+.icon-grid .overview-tile:active {
+  background-color: rgba(110, 110, 110, 0.6);
+}
+
+.app-folder-dialog {
+  background-color: rgba(56, 56, 61, 0.92);
+  border: 1px solid rgba(74, 74, 76, 0.5);
+}

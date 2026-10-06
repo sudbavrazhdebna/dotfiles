@@ -1,0 +1,93 @@
+window {
+    background: transparent;
+}
+
+#bar #center {
+    background-color: rgba(33, 34, 37, 0.99);
+    border-radius: 14px;
+    outline: 1px solid rgba(200, 202, 208, 0.09);
+    outline-offset: -1px;
+    padding: 0 8px;
+}
+
+
+.launcher,
+.launcher .item {
+    background: transparent;
+    border: none;
+}
+.launcher {
+    padding: 6px 2px;
+}
+.launcher .item.open {
+    background-image: radial-gradient(circle, rgba(200, 200, 200, 1) 2px, transparent 2px);
+}
+.launcher .item.focused {
+    background-image: radial-gradient(circle, rgba(0, 125, 254, 1) 2px, transparent 2px);
+}
+.launcher .item.urgent {
+    background-image: radial-gradient(circle, #ff4444 2px, transparent 2px);
+}
+.launcher .item.open,
+.launcher .item.focused,
+.launcher .item.urgent {
+    background-size: 5px 4px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.launcher .item:hover {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 40%, transparent 75%);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.launcher .item.open:hover {
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 40%, transparent 75%);
+    background-size: 5px 4px, 95% 95%;
+    background-position: center bottom, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.launcher .item.focused:hover {
+    background-image:
+        radial-gradient(circle, rgba(0, 125, 254, 1) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 40%, transparent 75%);
+    background-size: 5px 4px, 95% 95%;
+    background-position: center bottom, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.launcher .item.urgent:hover {
+    background-image:
+        radial-gradient(circle, #ff4444 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 40%, transparent 75%);
+    background-size: 5px 4px, 95% 95%;
+    background-position: center bottom, center;
+    background-repeat: no-repeat, no-repeat;
+}
+
+/* Separator */
+.label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 28px;
+    font-weight: 150;
+    margin: 0 4px;
+    padding: 0;
+    background: transparent;
+}
+/* Overview button */
+#overview,
+#overview-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+}
+#overview-btn {
+    padding-left: 10px;
+}
+#overview-btn:hover {
+    opacity: 0.7;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "dock",
+  "height": 52,
+  "position": "bottom",
+  "icon_theme": "Morewaita",
+  "anchor_to_edges": true,
+  "exclusive_zone": false,
+  "layer": "overlay",
+  "autohid": true,
+  "margin": {
+  "bottom": 5 },
+  "center": [
+    {
+      "type": "launcher",
+      "icon_size": 32,
+      "show_names": false,
+      "favorites": [
+        "com.mitchellh.ghostty",
+        "dev.zed.Zed",
+        "org.mozilla.firefox",
+        "org.telegram.desktop",
+        "sublime_text",
+        "org.gnome.Nautilus",
+        "clash-verge",
+        "AmneziaVPN"
+      ]
+    },
+    {
+      "type": "label",
+      "label": "|"
+    },
+    {
+      "type": "custom",
+      "name": "overview",
+      "bar": [{
+        "type": "button",
+        "name": "overview-btn",
+        "label": "\udb84\udcac",
+        "on_click": "!niri msg action toggle-overview"
+      }]
+    }
+  ]
+}

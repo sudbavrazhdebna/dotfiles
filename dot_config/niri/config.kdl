@@ -1,0 +1,32 @@
+include "binds.kdl"
+include "workspaces.kdl"
+include "rules.kdl"
+include "outputs.kdl"
+include "decorations.kdl"
+include "animations.kdl"
+include "autostart.kdl"
+include "input.kdl"
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "wayland"
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+overview {
+    zoom 0.2
+    backdrop-color "353540"
+    workspace-shadow {
+        off
+    }
+}

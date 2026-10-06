@@ -1,0 +1,41 @@
+prefer-no-csd
+
+layout {
+    background-color "#35354000"
+    center-focused-column "always"
+    always-center-single-column
+    
+    default-column-width { proportion 0.9; }
+    preset-column-widths {
+        proportion 0.33
+        proportion 0.5
+        proportion 0.66
+        proportion 0.9
+    }
+    tab-indicator {
+        off
+    }
+
+    gaps 12
+    struts {
+        left 0
+        right 0
+        top -5
+        bottom -5 
+    }
+}
+
+recent-windows {
+    debounce-ms 750
+    open-delay-ms 165
+    highlight {
+        active-color "515255"
+        padding 10
+        corner-radius 4
+    }
+    previews {
+        max-height 90
+        max-scale 1
+    }
+}
+

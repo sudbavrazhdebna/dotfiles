@@ -1,0 +1,250 @@
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+    open-focused true
+}
+
+window-rule {
+    match is-focused=true
+    
+    focus-ring { 
+        off
+        width 0.5
+        //active-color "#000000FF"
+        active-color "#000000B3"
+    }
+    border {
+        on
+        width 1
+        //active-color "#525354"
+        active-color "#4A4A4E"
+        //active-color "#353639"
+        //active-gradient from="#738696" to="#8993a0"
+        //active-gradient from="#616161" to="#888888" angle=300
+    }
+    shadow {
+        on
+        softness 40
+        spread 0
+        offset x=0 y=20
+        color "#000000B3"
+    }
+}
+
+window-rule {
+    match is-focused=false
+
+    shadow {
+        on
+        softness 30
+        spread 0
+        offset x=0 y=20
+        color "#00000028"
+
+        //off
+        //softness 0
+        //spread 1
+        //color "#000000FF"
+        //offset x=0 y=0
+    }
+    focus-ring {
+        off
+    }
+    border {
+        on
+        width 1
+        active-color "#28292d"
+        inactive-color "#28292d"
+    }
+}
+
+window-rule {
+    match app-id="^org\\.gnome\\.Nautilus$"
+    match app-id="org.gnome.Calculator"
+    match app-id="org.gnome.Calendar"
+    match app-id="org.gnome.clocks"
+    match app-id="org.gnome.Contacts"
+    match app-id="org.gnome.TextEditor"
+    match app-id="org.gnome.Loupe"
+    match app-id="org.gnome.Weather"
+    match app-id="org.gnome.Maps"
+    match app-id="org.gnome.Music"
+    match app-id="org.gnome.Console"
+    match app-id="org.gnome.baobab"
+    match app-id="org.gnome.DiskUtility"
+    match app-id="org.gnome.Logs"
+    match app-id="org.gnome.SystemMonitor"
+    match app-id="org.gnome.Characters"
+    match app-id="org.gnome.font-viewer"
+    match app-id="org.gnome.Snapshot"
+    match app-id="org.gnome.Showtime"
+    match app-id="adwaita-1-demo"
+    match app-id="io.missioncenter.MissionCenter"
+    match app-id="org.gnome.gitlab.YaLTeR.VideoTrimmer"
+    match app-id="io.github.celluloid_player.Celluloid"
+    match app-id="org.gnome.Totem$"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="org.altlinux.Tuner"
+    match app-id="page.tesk.Refine"
+    match app-id="com.github.tchx84.Flatseal"
+    match app-id="org.gnome.Papers"
+    match app-id="com.github.PintaProject.Pinta"
+    match app-id="org.gnome.gitlab.somas.Apostrophe"
+    match app-id="io.gitlab.adhami3310.Footage"
+    match app-id="xdg-desktop-portal-gnome"
+    match app-id="org.gnome.Adwaita1.Demo"
+    match app-id="org.gnome.Yelp"
+    match app-id="org.gnome.Decibels"
+    match app-id="org.pulseaudio.pavucontrol"
+    match app-id="org.gnome.Settings.GlobalShortcutsProvider"
+    match app-id="zenity"
+    match app-id=r#"^dev\.zed\.Zed$"#
+    match app-id="net.trowell.typesetter"
+    match app-id="io.github.sepehr_rs.Sudoku"
+
+   // background-effect {
+   //   blur true
+   //   xray true
+   //   saturation 1
+   //   noise 0.01
+   //}
+
+    border {
+        off
+    }
+}
+
+window-rule {
+    match app-id="jetbrains-pycharm-ce"
+    geometry-corner-radius 0
+    border {
+        off
+    }
+}
+window-rule {
+    match app-id="ONLYOFFICE"
+    geometry-corner-radius 10
+    border {
+        off
+    }
+}
+
+window-rule {
+    match app-id="Alacritty"
+
+    background-effect {
+        blur true
+        xray true
+        saturation 1
+        noise 0.01
+    }
+
+}
+
+window-rule {
+    match app-id="dev.zed.Zed"
+    geometry-corner-radius 10
+}
+
+window-rule {
+    open-floating true
+
+    match app-id=r#"^firefox$"# title="^Picture-in-Picture$"
+    match app-id="AmneziaVPN$"
+    //match app-id="org.gnome.clocks"
+    //match app-id="org.gnome.Calculator"
+    match app-id="org.gnome.NautilusPreviewer"
+    match app-id="org.gnome.Showtime"
+    //match app-id="org.gnome.Calendar"
+    //match app-id="org.gnome.Weather"
+    //match app-id="org.altlinux.Tuner"
+    match app-id="pavucontrol"   
+    match app-id="blueman-manager"
+    //match app-id=r#"^io\.missioncenter\.MissionCenter$"#
+    match app-id="nm-connection-editor"
+    //match app-id=r#"^org\.telegram\.desktop$"# title="^Media viewer$"
+    //match app-id=r#"^org\.gnome\.Nautilus$"#
+}
+
+window-rule {
+    match app-id="nm-connection-editor"
+    match app-id="blueman-manager"
+    match app-id="pavucontrol"
+    default-column-width { proportion 0.405; }
+    default-window-height { proportion 0.7; }
+}
+
+window-rule {
+    default-column-width { proportion 0.1; }
+    default-window-height { proportion 0.4; }
+    match app-id="org.gnome.clocks"
+    match app-id="AmneziaVPN$"
+    match app-id="org.gnome.Calculator"
+}
+
+window-rule {
+    match app-id="org.gnome.Calendar"
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    default-column-width { proportion 0.6;}
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+    block-out-from "screen-capture"
+}
+
+layer-rule {
+    match namespace="^launcher$"
+    shadow {
+        on
+        softness 50
+        spread 10
+        color "#00000090" 
+        offset x=0 y=0
+    }
+}
+
+layer-rule {
+    match namespace="vicinae"
+    geometry-corner-radius 10
+    
+    shadow {
+        on
+        softness 40
+        spread 0
+        offset x=0 y=20
+        color "#000000B3"
+    }
+    background-effect {
+        blur true
+        xray false
+        noise 0.01
+        saturation 1
+    }
+}
+
+layer-rule {
+    match namespace="swayosd"
+    geometry-corner-radius 18
+    shadow {
+        on
+        softness 10
+        spread 2
+        color "#00000056"
+        offset x=0 y=6
+    }
+    background-effect {
+        blur true
+        xray false
+        saturation 1
+        noise 0.01
+    }
+}
+
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+

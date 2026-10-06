@@ -1,0 +1,5 @@
+//spawn-at-startup "sh" "-c" "swaybg -i ~/.config/wallpapers/m.jpg"
+//spawn-at-startup "swaync"
+//spawn-at-startup "~/.cargo/bin/wl-clip-persist" "--clipboard" "regular" "--selection-size-limit" "512000"
+//spawn-at-startup "veilad"
+//spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1"
